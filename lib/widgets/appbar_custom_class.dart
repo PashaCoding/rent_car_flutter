@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomAppbarClass {
-  static AppBar customAppbar(String yourTitleText,
+  static AppBar customAppbar(String yourTitleText,VoidCallback backArrow,
           {String yourActionText = "Skip"}) =>
       AppBar(
         elevation: 0,
         backgroundColor: const Color(0xffFFFFFF),
         leading: IconButton(
-          onPressed: () {},
+          onPressed:backArrow,
           icon: const Icon(
             Icons.arrow_back_ios_sharp,
             color: Color(0xff000000),
+            size: 17,
           ),
         ),
         title: CustomTextClass.customText(
@@ -39,7 +40,7 @@ class CustomAppbarClass {
     backgroundColor: const Color(0xffFFFFFF),
     leading: IconButton(
       onPressed: (){},
-      icon:const Icon(Icons.arrow_back_ios_sharp,color: Color(0xff000000),),
+      icon:const Icon(Icons.arrow_back_ios_sharp,size:17,color: Color(0xff000000),),
     ),
     title: CustomTextClass.customText(yourText2,0xff000000, 20.sp,yourFontWeight: FontWeight.w700),
     centerTitle: true,

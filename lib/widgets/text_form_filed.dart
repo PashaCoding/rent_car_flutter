@@ -5,10 +5,12 @@ class CustomTextFormFiledClass{
       String yourHintText,
       double yourHeight,
       double yourWidth,
+      TextEditingController yourControlar,
       )=>SizedBox(
     height:yourHeight,
     width: yourWidth,
     child: TextField(
+      controller: yourControlar,
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),

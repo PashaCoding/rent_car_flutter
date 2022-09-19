@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../widgets/custom_button.dart';
 import '../../widgets/text_custom_class.dart';
+import 'package:first_project/views/SignIn/sign_in.dart';
 
 class LanguageChoose extends StatefulWidget {
   const LanguageChoose({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _LanguageChooseState extends State<LanguageChoose> {
             Row(
               children: [
                 Radio(
-                  focusColor: Colors.cyan,
+                    focusColor: Colors.cyan,
                     value: '1',
                     groupValue: value2,
                     onChanged: (value) {
@@ -71,9 +72,8 @@ class _LanguageChooseState extends State<LanguageChoose> {
                 SizedBox(
                   width: 10.w,
                 ),
-                CustomTextClass.customText("English",
-                    0xff000000,
-                    20.0.sp, yourFontFamily: "Roboto"),
+                CustomTextClass.customText("English", 0xff000000, 20.0.sp,
+                    yourFontFamily: "Roboto"),
               ],
             ),
             SizedBox(
@@ -101,15 +101,17 @@ class _LanguageChooseState extends State<LanguageChoose> {
                 SizedBox(
                   width: 10.w,
                 ),
-                CustomTextClass.customText("Spanish",
-                    0xff000000,
-                    20.0.sp, yourFontFamily: "Roboto"),
+                CustomTextClass.customText("Spanish", 0xff000000, 20.0.sp,
+                    yourFontFamily: "Roboto"),
               ],
             ),
             SizedBox(
               height: 71.h,
             ),
-            CustomButton.customGradientButton("Keep Going"),
+            CustomButton.customGradientButton(
+                "Keep Going",
+                () => Navigator.push(
+                    context, MaterialPageRoute(builder: (context)=>const SignIn()))),
           ],
         ),
       ),

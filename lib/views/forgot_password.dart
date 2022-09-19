@@ -16,7 +16,7 @@ class ForgotPassword extends StatelessWidget {
             Icons.chevron_left_outlined,
             color: Color(0xff000000),
           ),
-          onPressed: () {},
+          onPressed: () {Navigator.pop(context);},
         ),
         title: Text(
           "Forgot Password",
@@ -87,7 +87,7 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
               height: 78.h,
             ),
-            CustomButton.customGradientButton("Done"),
+            CustomButton.customGradientButton("Done",(){}),
             SizedBox(
               height: 366.h,
             ),

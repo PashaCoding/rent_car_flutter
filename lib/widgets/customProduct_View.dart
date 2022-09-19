@@ -30,7 +30,7 @@ class ProductViewClass{
                 CustomTextClass.customText("\$20.00/hr",0xffBC0420, 12.sp,yourFontWeight: FontWeight.w700),
               ],
             ),
-            CustomTextClass.customText("Location : New york",0xff00000, 10.sp,yourFontWeight: FontWeight.w500),
+            CustomTextClass.customText("Location : New york",0xff000000, 10.sp,yourFontWeight: FontWeight.w500),
           ],
         )
       ],
